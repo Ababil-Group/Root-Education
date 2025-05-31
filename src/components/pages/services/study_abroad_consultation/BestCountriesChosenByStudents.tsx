@@ -8,11 +8,13 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import EuropeStudyCountryCard from "./EuropeStudyCountryCard";
-import { getAllCountries } from "@/services/getAllCountries";
+import { dummyCountries } from "@/services/Data";
 import { Study_Country } from "@/types/country";
 
 const BestCountriesChosenByStudents = async () => {
-  const countries = await getAllCountries();
+  // const countries = await getAllCountries();
+
+  const countries = dummyCountries;
 
   return (
     <Section

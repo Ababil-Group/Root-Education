@@ -1,10 +1,12 @@
-import { getAllCountries } from "@/services/getAllCountries";
+import { dummyCountries } from "@/services/Data";
 import { Study_Country } from "@/types/country";
 import Link from "next/link";
 import { IoMdArrowDropright } from "react-icons/io";
 
 const FooterCountryLinks = async () => {
-  const countries = await getAllCountries();
+  // const countries = await getAllCountries();
+
+  const countries = dummyCountries;
 
   return (
     <ul className="flex flex-col justify-between gap-4">

@@ -8,13 +8,15 @@ import {
 } from "@/components/ui/carousel";
 import UniversityLogoCard from "./UniversityLogoCard";
 import FadeInUpWithSlowBounce from "@/animation_wrappers/FadeInUpWithSlowBounce";
-import { getAllUniversities } from "@/services/getAllUniversities";
+import { dummyUniversities } from "@/services/Data";
 import { University } from "@/types/university";
 
 const OurPartnersUniversities = async () => {
-  const universityData = await getAllUniversities();
+  // const universityData = await getAllUniversities();
 
-  const universities = universityData.results;
+  // const universities = universityData.results;
+
+  const universities = dummyUniversities;
 
   return (
     <Section
