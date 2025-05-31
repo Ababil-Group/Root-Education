@@ -31,7 +31,7 @@ const StudyCountryCard = ({ country }: { country: Study_Country }) => {
           Study in {country.country}
         </h4>
         <p className="line-clamp-3 text-center text-sm font-medium duration-300 group-hover:text-white">
-          {country?.box1?.descriptions[0]?.description}
+          {country?.box1?.description}
         </p>
         <div className="flex items-center justify-center">
           <Link

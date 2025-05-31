@@ -1,60 +1,105 @@
-export type Study_Country = {
-  id: number;
+// export type Study_Country = {
+//   id: number;
 
-  country: string;
+//   country: string;
 
-  slug: string;
+//   slug: string;
 
-  flag?: File | null | FileList | string;
+//   flag?: File | null | FileList | string;
 
-  photo?: File | null | FileList | string;
+//   photo?: File | null | FileList | string;
 
-  route_slug: string;
+//   route_slug: string;
 
-  box1: Box1;
+//   box1: Box1;
 
-  whystudy: Whystudy;
+//   whystudy: Whystudy;
 
-  costofliving: Costofliving;
+//   costofliving: Costofliving;
 
-  jobopportunity: Jobopportunity;
+//   jobopportunity: Jobopportunity;
 
-  scholarship: Scholarship;
+//   scholarship: Scholarship;
 
-  application_procedures: ApplicationProcedure;
+//   application_procedures: ApplicationProcedure;
 
-  admission_requirments: AdmissionRequirment;
+//   admission_requirments: AdmissionRequirment;
 
-  visaprocedures: Visaprocedure;
+//   visaprocedures: Visaprocedure;
 
-  cities: City[];
+//   cities: City[];
 
-  faq: Faq[];
-};
-
+//   faq: Faq[];
+// };
 export type Box1 = {
   title: string;
-  descriptions: Description[];
-};
-
-export type Description = {
   description: string;
 };
 
 export type Whystudy = {
-  short_breaf: string;
-  whystudylist: Whystudylist[];
+  heading: string;
+  content: string;
+};
+
+export type Costofliving = {
+  heading: string;
+  content: string;
+};
+
+export type Jobopportunity = {
+  heading: string;
+  content: string;
+};
+
+export type Scholarship = {
+  heading: string;
+  content: string;
+};
+
+export type ApplicationProcedure = {
+  steps: string[];
+};
+
+export type AdmissionRequirment = {
+  requirements: string[];
+};
+
+export type Visaprocedure = {
+  steps: string[];
+};
+
+export type City = {
+  name: string;
+  population: number;
+};
+
+export type Faq = {
+  question: string;
+  answer: string;
+};
+
+export type Study_Country = {
+  id: number;
+  country: string;
+  slug: string;
+  flag?: File | null | FileList | string;
+  photo?: File | null | FileList | string;
+  route_slug: string;
+  box1: Box1;
+  whystudy: Whystudy;
+  costofliving: Costofliving;
+  jobopportunity: Jobopportunity;
+  scholarship: Scholarship;
+  application_procedures: ApplicationProcedure;
+  admission_requirments: AdmissionRequirment;
+  visaprocedures: Visaprocedure;
+  cities: City[];
+  faq: Faq[];
 };
 
 export type Whystudylist = {
   title: string;
   content: string;
-};
-
-export type Costofliving = {
-  short_breaf: string;
-  list: List[];
-  fees: Fee[];
 };
 
 export type List = {
@@ -67,19 +112,9 @@ export type Fee = {
   range: string;
 };
 
-export type Jobopportunity = {
-  list: List2[];
-  short_breaf: string;
-};
-
 export type List2 = {
   title: string;
   content: string;
-};
-
-export type Scholarship = {
-  scholarshiplist: Scholarshiplist[];
-  short_breaf: string;
 };
 
 export type Scholarshiplist = {
@@ -90,19 +125,9 @@ export type Scholarshiplist = {
   process: string;
 };
 
-export type ApplicationProcedure = {
-  applicationprocedureslist: Applicationprocedureslist[];
-  short_breaf: string;
-};
-
 export type Applicationprocedureslist = {
   title: string;
   content: string;
-};
-
-export type AdmissionRequirment = {
-  list: List3[];
-  short_breaf: string;
 };
 
 export type List3 = {
@@ -110,22 +135,7 @@ export type List3 = {
   content: string;
 };
 
-export type Visaprocedure = {
-  list: List4[];
-  short_breaf: string;
-};
-
 export type List4 = {
   title: string;
   content: string;
-};
-
-export type City = {
-  logo?: File | null | FileList | string;
-  name: string;
-};
-
-export type Faq = {
-  question: string;
-  answer: string;
 };
